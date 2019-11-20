@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ImageActivity">
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/rdgrp"
+        >
+
+        <RadioButton
+
+            style="@style/imageselect"
+            android:text="Doremon"
+            android:id="@+id/rddor"
+            />
+
+        <RadioButton
+            style="@style/imageselect"
+            android:text="Batman"
+            android:id="@+id/rdbat"
+            />
+        <RadioButton
+            style="@style/imageselect"
+            android:text="Dog"
+            android:id="@+id/rddog"
+            />
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/img"
+        android:src="@drawable/doremon"
+        />
+
+</LinearLayout>

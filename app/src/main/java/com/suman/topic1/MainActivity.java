@@ -15,7 +15,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 
     EditText etfirst, etsecond;
-    RadioButton rdadd, rdsubtract, rdmult;
+    RadioButton rdadd, rdsubtract, rdmult, rddiv;
     Button btnCal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         rdadd=findViewById(R.id.rdadd);
         rdsubtract=findViewById(R.id.rdsubtract);
         rdmult=findViewById(R.id.rdmult);
+        rddiv=findViewById(R.id.rddiv);
         btnCal=findViewById(R.id.btncal);
 
         btnCal.setOnClickListener(new View.OnClickListener() {
@@ -55,9 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 else if(rdsubtract.isChecked()){
                     result=first-second;
                 }
-                else
+                else if(rdmult.isChecked())
                 {
                     result=first*second;
+                }
+                else
+                {
+                    result=first/second;
                 }
 
                 Toast.makeText(MainActivity.this, "Result is" + result, Toast.LENGTH_LONG).show();
